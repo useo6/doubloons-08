@@ -1096,9 +1096,9 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
     return nSubsidy + nFees;
 }
 
-static const int64 nTargetTimespan = 0.5 * 24 * 60 * 60; // Doubloons: 43,200 seconds (12 hours)
-static const int64 nTargetSpacing = 60; // Doubloons: 60 seconds (1 minute)
-static const int64 nInterval = nTargetTimespan / nTargetSpacing; // 720 blocks
+static int64 nTargetTimespan = 0.5 * 24 * 60 * 60; // Doubloons: 43,200 seconds (12 hours)
+static int64 nTargetSpacing = 60; // Doubloons: 60 seconds (1 minute)
+static int64 nInterval = nTargetTimespan / nTargetSpacing; // 720 blocks
 
 // Thanks: Balthazar for suggesting the following fix
 // https://bitcointalk.org/index.php?topic=182430.msg1904506#msg1904506
