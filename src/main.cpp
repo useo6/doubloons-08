@@ -1278,21 +1278,21 @@ bool IsInitialBlockDownload()
 
 void static InvalidChainFound(CBlockIndex* pindexNew)
 {
-    if (pindexNew->nChainWork > nBestInvalidWork)
+    if (pindexNew->bnChainWork > bnBestInvalidWork)
     {
-        nBestInvalidWork = pindexNew->nChainWork;
-        pblocktree->WriteBestInvalidWork(CBigNum(nBestInvalidWork));
+        bnBestInvalidWork = pindexNew->bnChainWork;
+        CTxDB().WriteBestInvalidWork(bnBestInvalidWork);
         uiInterface.NotifyBlocksChanged();
     }
-    printf("InvalidChainFound: invalid block=%s  height=%d  log2_work=%.8g  date=%s\n",
-      pindexNew->GetBlockHash().ToString().c_str(), pindexNew->nHeight,
-      log(pindexNew->nChainWork.getdouble())/log(2.0), DateTimeStrFormat("%Y-%m-%d %H:%M:%S",
+    printf("InvalidChainFound: invalid block=%s  height=%d  work=%s  date=%s\n",
+      pindexNew->GetBlockHash().ToString().substr(0,20).c_str(), pindexNew->nHeight,
+      pindexNew->bnChainWork.ToString().c_str(), DateTimeStrFormat("%x %H:%M:%S",
       pindexNew->GetBlockTime()).c_str());
-    printf("InvalidChainFound:  current best=%s  height=%d  log2_work=%.8g  date=%s\n",
-      hashBestChain.ToString().c_str(), nBestHeight, log(nBestChainWork.getdouble())/log(2.0),
-      DateTimeStrFormat("%Y-%m-%d %H:%M:%S", pindexBest->GetBlockTime()).c_str());
-    if (pindexBest && nBestInvalidWork > nBestChainWork + (pindexBest->GetBlockWork() * 6).getuint256())
-        printf("InvalidChainFound: Warning: Displayed transactions may not be correct! You may need to upgrade, or other nodes may need to upgrade.\n");
+    printf("InvalidChainFound:  current best=%s  height=%d  work=%s  date=%s\n",
+      hashBestChain.ToString().substr(0,20).c_str(), nBestHeight, bnBestChainWork.ToString().c_str(),
+      DateTimeStrFormat("%x %H:%M:%S", pindexBest->GetBlockTime()).c_str());
+    if (pindexBest && bnBestInvalidWork > bnBestChainWork + pindexBest->GetBlockWork() * 6)
+        printf("InvalidChainFound: WARNING: Displayed transactions may not be correct!  You may need to upgrade, or other nodes may need to upgrade.\n");
 }
 
 void static InvalidBlockFound(CBlockIndex *pindex) {
