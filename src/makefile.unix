@@ -153,8 +153,8 @@ endif
 
 all: doubloons
 
-test check: test_litecoin FORCE
-	./test_litecoin
+test check: test_doubloons FORCE
+	./test_doubloons
 
 #
 # LevelDB support
@@ -201,11 +201,11 @@ obj-test/%.o: test/%.cpp
 	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	  rm -f $(@:%.o=%.d)
 
-test_litecoin: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
+test_doubloons: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	$(LINK) $(xCXXFLAGS) -o $@ $(LIBPATHS) $^ $(TESTLIBS) $(xLDFLAGS) $(LIBS)
 
 clean:
-	-rm -f doubloons test_litecoin
+	-rm -f doubloons test_doubloons
 	-rm -f obj/*.o
 	-rm -f obj-test/*.o
 	-rm -f obj/*.P
