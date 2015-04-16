@@ -35,39 +35,61 @@ namespace Checkpoints
     // + Contains no strange transactions
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-        (  1500, uint256("0x841a2965955dd288cfa707a755d05a54e45f8bd476835ec9af4402a2b59a2967"))
-        (  4032, uint256("0x9ce90e427198fc0ef05e5905ce3503725b80e26afd35a987965fd7e3d9cf0846"))
-        (  8064, uint256("0xeb984353fc5190f210651f150c40b8a4bab9eeeff0b729fcb3987da694430d70"))
-        ( 16128, uint256("0x602edf1859b7f9a6af809f1d9b0e6cb66fdc1d4d9dcd7a4bec03e12a1ccd153d"))
-        ( 23420, uint256("0xd80fdf9ca81afd0bd2b2a90ac3a9fe547da58f2530ec874e978fce0b5101b507"))
-        ( 50000, uint256("0x69dc37eb029b68f075a5012dcc0419c127672adb4f3a32882b2b3e71d07a20a6"))
-        ( 80000, uint256("0x4fcb7c02f676a300503f49c764a89955a8f920b46a8cbecb4867182ecdb2e90a"))
-        (120000, uint256("0xbd9d26924f05f6daa7f0155f32828ec89e8e29cee9e7121b026a7a3552ac6131"))
-        (161500, uint256("0xdbe89880474f4bb4f75c227c77ba1cdc024991123b28b8418dbbf7798471ff43"))
-        (179620, uint256("0x2ad9c65c990ac00426d18e446e0fd7be2ffa69e9a7dcb28358a50b2b78b9f709"))
-        (240000, uint256("0x7140d1c4b4c2157ca217ee7636f24c9c73db39c4590c4e6eab2e3ea1555088aa"))
-        (383640, uint256("0x2b6809f094a9215bafc65eb3f110a35127a34be94b7d0590a096c3f126c6f364"))
-        (409004, uint256("0x487518d663d9f1fa08611d9395ad74d982b667fbdc0e77e9cf39b4f1355908a3"))
-        (456000, uint256("0xbf34f71cc6366cd487930d06be22f897e34ca6a40501ac7d401be32456372004"))
-        (541794, uint256("0x1cbccbe6920e7c258bbce1f26211084efb19764aa3224bec3f4320d77d6a2fd2"))
-        (585010, uint256("0xea9ea06840de20a18a66acb07c9102ee6374ad2cbafc71794e576354fea5df2d"))
-        (638902, uint256("0x15238656e8ec63d28de29a8c75fcf3a5819afc953dcd9cc45cecc53baec74f38"))
+        (         0, uint256("0xbbd01e417e370842498a91038fd40da95f4a6166a231a3bed3c4671207bd8296"))
+	(        25, uint256("0x52424ba26dd18c2da10170054c8c39ec649d0ac2630585e53099ac70dc360721"))
+	(       125, uint256("0xa13b9e454a00927f6b6fd59eda118d76b270f09f80ff848e7f3cb9a2f47837ed"))
+	(      1025, uint256("0xa59d07caeca8b8601803a72729dabb846e4a2adda0022ea212e4911824ff85ae"))
+	(      5025, uint256("0xdc5ea38e4b4f68e66ec4fe3c7b742f02388bca5d90f3c340675229f8ae23f8ca"))
+	(     10025, uint256("0x5fac2e11b6ab636534d0dc557f86f302b71647c9084eae6fe2ca389a37bb4e68"))
+	(     11025, uint256("0xb68d83930c52a880326fdda93fa6963e95133c1592cab5c8488b8aaebb4206b3"))
+	(     13025, uint256("0x5d5eb98932c5d81a1bac5fc653c2d95e648d089b2a607ca6ac15975bf05af009"))
+	(     15025, uint256("0x2c4305a5e070e1f470fa3289653db98bd7dd6eb847780d6d32e65d5b901b429f"))
+	(     20025, uint256("0x38d3027035e4725852203ee4a38768ce3fd12cc8d3d9ee1c00467d17d81c42be"))
+	(     25025, uint256("0x005df538003a40bc5f83c299397dce6a4d2a736ab4fdf46752a8fcec5a45cf7f"))
+	(     30025, uint256("0x0c3a6a48a8811b9c1683d86148b40384e0920a4020e0229bb7d3928e4c1e3168"))
+	(     35000, uint256("0xbc86cab2bf3c1dba06e511b7a0830dd1252b5b860cae1ae90c61c0ff117d191a"))
+	(     40025, uint256("0xafc48c6b0414bdc09ab31033ed4dd56d76c3fb29bc775060f2e393d58683625a"))
+	(     43665, uint256("0xa77dbe7205f122896e3f172a0fc7e99d662cf15cf4e92324cbf69a472160a1bd"))
+	(     43869, uint256("0xa55c9f9c892dc84fc97a670e79d79c3bec8f9dd9e32647fae8d8dcf13351f395"))
+	(     46132, uint256("0xcab3584e46e2b038475cee3fc151930a5254989973509463cd9ad5980525c59a"))
+	(     46525, uint256("0x80f62adfbb336b80c66a2eea963a705696f83787f375d72454511cef6db9ae77"))
+	(     47025, uint256("0x16d4d4462499ade6076ef2996913eb4b91eb6965e9d78b2553a83974ae42b57f"))
+	(     47525, uint256("0xa881a1f71726e1606211db240ea34f06343418a60739ce53195ddabee302b5de"))
+	(     48025, uint256("0xb63b43ed40ab1aaec59228dcc11259a8bc1407b20257fd1283d74bc60501a158"))
+	(     48525, uint256("0xe7754742b376b32a816038256f5277fa073527b6526887484ecbd8439b22eecf"))
+	(     49025, uint256("0xef808fbbf7d5588394164b9f6c4190ae895134f1aa0d220f6379394e97ec07d7"))
+	(     50025, uint256("0x71c30991bff5baeefb2b6d976f9e54c72a25f164c14fe2239b5de248392f9d80"))
+	(     60025, uint256("0x9d7095a313497f158b65a7832e1434d06a52d76799b4d7c6db6a7f966b488013"))
+	(     65025, uint256("0x6fa8c8e1980d9929b09e0d8a2536c0fe67f230b02923060ab013d459c2c17184"))
+	(     65525, uint256("0xebf93cdd64236622786e8b2b55079f70db658c6b27eccd92574271507789633e"))
+	(     85525, uint256("0x482eab083d59ff7846dbeedadd5bffbe31737a9ce703d39e35bb39a17982be25"))
+	(     95525, uint256("0xe66cb922df396e62026b2c2c812690ce962bd3ad2a1e70b6d2f8b60732a9978b"))
+	(    105525, uint256("0x2ac38e841ca3b8362aa3a7bbf3e757055518a450ce4712c73124be161a03ccc2"))
+        (    110000, uint256("0xe2d99af9501e8c2af2cce48516b925ac37c60b479530c72c7f9d198f7ee6fa07"))
+        (    120000, uint256("0x931dc828b580cbafe526c7db7e21fe807cba4fd7c0827e56dcf297267db13ba5"))
+        (    130000, uint256("0x4ec7cc6e98f87690f90969ff85e2fa133238cb4e80766c0b64796fce5317a902"))
+        (    140000, uint256("0xfcfd03560902a1b0ae6ba0de86a0992182600d57825b7a9e301fcca77e434c2c"))
+        (    267269, uint256("0x896b0ce91d5d7b3512871444a05f53d34c4c0e6c338b1c6de0e6c92aa10debb9"))
+        (    267270, uint256("0x595e91d2ab47f6313c48802a8befce80d83757c095350b1f3b0ce7127fe2b0f6"))
+        (    300000, uint256("0xd9941fe7230bb38099fb8bfab31bfa0d54b4806e4f1b4900a3403297e5bc4a1c"))
+        (    324000, uint256("0x0e57d704b97c43a97031161604412fd312e4b7de9650e8d85b5b9a4a041d8a80"))
+        (    532300, uint256("0xdc86594eb869ad0038ccd0d81fc663011ee58a6532cdceaaa9094f2d8bd49e93"))
         ;
     static const CCheckpointData data = {
         &mapCheckpoints,
-        1410516073, // * UNIX timestamp of last checkpoint block
-        4896865,    // * total number of transactions between genesis and last checkpoint
+        1417309259, // * UNIX timestamp of last checkpoint block
+        567745 ,    // * total number of transactions between genesis and last checkpoint //IDK!
                     //   (the tx=... number in the SetBestChain debug.log lines)
-        7000.0     // * estimated number of transactions per day after checkpoint
+        10000.0     // * estimated number of transactions per day after checkpoint //guess!
     };
 
     static MapCheckpoints mapCheckpointsTestnet =
         boost::assign::map_list_of
-        (   546, uint256("0xa0fea99a6897f531600c8ae53367b126824fd6a847b2b2b73817a95b8e27e602"))
+        (   546, uint256("0xa0fea99a6897f531600c8ae53367b126824fd6a847b2b2b73817a95b8e27e602")) //LITECOIN  data!!!
         ;
     static const CCheckpointData dataTestnet = {
         &mapCheckpointsTestnet,
-        1365458829,
+        1365458829, //doubloons data
         547,
         576
     };
